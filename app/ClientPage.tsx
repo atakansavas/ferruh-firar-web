@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Instagram, Music } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Instagram, Mail, Music } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function ClientPage() {
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     // Smooth scrolling behavior
-    document.documentElement.style.scrollBehavior = "smooth"
+    document.documentElement.style.scrollBehavior = "smooth";
 
     // Parallax scroll effect
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 relative overflow-hidden">
@@ -56,7 +56,9 @@ export default function ClientPage() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-stone-50/80 backdrop-blur-sm border-b border-stone-200/50">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-light tracking-wider text-stone-800">FERRUH FIRAR</h1>
+          <h1 className="text-2xl md:text-3xl font-light tracking-wider text-stone-800">
+            FERRUH FIRAR
+          </h1>
           <div className="flex gap-4">
             <Link
               href="https://open.spotify.com/artist/6Cbn7my8L1eq70KhzuoTwz?si=j88hBYJwT4q3Ie3TZRlFcg"
@@ -72,7 +74,11 @@ export default function ClientPage() {
                 <span className="sr-only">Spotify</span>
               </Button>
             </Link>
-            <Link href="https://www.instagram.com/ferruhfirar" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://www.instagram.com/ferruhfirar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="ghost"
                 size="icon"
@@ -106,21 +112,26 @@ export default function ClientPage() {
       {/* The Story Section */}
       <section className="py-20 px-6 bg-stone-100/50 relative">
         <div className="container mx-auto max-w-3xl">
-          <h3 className="text-4xl md:text-5xl font-light text-stone-800 mb-12 text-center tracking-wide">The Story</h3>
+          <h3 className="text-4xl md:text-5xl font-light text-stone-800 mb-12 text-center tracking-wide">
+            The Story
+          </h3>
           <div className="prose prose-lg prose-stone max-w-none">
             <p className="text-stone-700 leading-relaxed mb-8 text-lg font-light">
-              From the ancient whirling halls of Turkey to the pulsing heart of modern electronic music, Ferruh Firar
-              bridges worlds that have never met. In the sacred geometry of Sufi mysticism, he found the rhythm that
-              drives contemporary souls to transcendence.
+              From the ancient whirling halls of Turkey to the pulsing heart of
+              modern electronic music, Ferruh Firar bridges worlds that have
+              never met. In the sacred geometry of Sufi mysticism, he found the
+              rhythm that drives contemporary souls to transcendence.
             </p>
             <p className="text-stone-700 leading-relaxed mb-8 text-lg font-light">
-              Each track is a meditation in motion, where the spiritual depth of centuries-old Sufi traditions merges
-              with the hypnotic pulse of techno. This is music for the seekers, the dancers, the ones who find the
-              divine in the beat drop.
+              Each track is a meditation in motion, where the spiritual depth of
+              centuries-old Sufi traditions merges with the hypnotic pulse of
+              techno. This is music for the seekers, the dancers, the ones who
+              find the divine in the beat drop.
             </p>
             <p className="text-stone-700 leading-relaxed text-lg font-light italic">
-              "In the spinning of the dervish and the pulse of the synthesizer, I found the same truth - that music is
-              the bridge between the earthly and the eternal."
+              "In the spinning of the dervish and the pulse of the synthesizer,
+              I found the same truth - that music is the bridge between the
+              earthly and the eternal."
             </p>
           </div>
         </div>
@@ -129,7 +140,9 @@ export default function ClientPage() {
       {/* Visual Gallery */}
       <section className="py-20 px-6 relative">
         <div className="container mx-auto max-w-6xl">
-          <h3 className="text-4xl md:text-5xl font-light text-stone-800 mb-16 text-center tracking-wide">Visions</h3>
+          <h3 className="text-4xl md:text-5xl font-light text-stone-800 mb-16 text-center tracking-wide">
+            Visions
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* SERÜVEN Album Cover */}
             <div className="group cursor-pointer lg:col-span-2">
@@ -185,7 +198,9 @@ export default function ClientPage() {
       {/* Call to Action */}
       <section className="py-20 px-6 bg-stone-900 text-stone-100 relative">
         <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-3xl md:text-4xl font-light mb-8 tracking-wide">Listen. Feel. Escape.</h3>
+          <h3 className="text-3xl md:text-4xl font-light mb-8 tracking-wide">
+            Listen. Feel. Escape.
+          </h3>
           <p className="text-stone-300 mb-12 text-lg font-light leading-relaxed">
             Join the journey through sound and silence
           </p>
@@ -204,7 +219,11 @@ export default function ClientPage() {
                 Stream on Spotify
               </Button>
             </Link>
-            <Link href="https://www.instagram.com/ferruhfirar" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://www.instagram.com/ferruhfirar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="lg"
@@ -214,6 +233,39 @@ export default function ClientPage() {
                 Follow Journey
               </Button>
             </Link>
+            <Link href="mailto:info@benatakan.com">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-transparent border-stone-300 text-stone-100 hover:bg-stone-100 hover:text-stone-900 transition-all duration-300 px-8 py-3 hover:scale-105"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Contact
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mail Updates Section */}
+      <section className="py-16 px-6 bg-stone-50">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h3 className="text-2xl md:text-3xl font-light text-stone-800 mb-6">
+            Stay Updated
+          </h3>
+          <p className="text-stone-600 mb-8 text-lg font-light">
+            Subscribe to receive updates about new releases and events
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex items-center gap-2 text-stone-700">
+              <Mail className="h-5 w-5" />
+              <a
+                href="mailto:info@benatakan.com"
+                className="hover:text-stone-900 transition-colors"
+              >
+                info@benatakan.com
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -221,24 +273,32 @@ export default function ClientPage() {
       {/* Footer */}
       <footer className="py-12 px-6 bg-stone-50 border-t border-stone-200">
         <div className="container mx-auto text-center">
-          <p className="text-stone-500 text-sm font-light tracking-wide">© 2024 Ferruh Firar. All rights reserved.</p>
+          <p className="text-stone-500 text-sm font-light tracking-wide">
+            © 2024 Ferruh Firar. All rights reserved.
+          </p>
         </div>
       </footer>
 
       <style jsx>{`
         @keyframes fade-in {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
-        
+
         .animate-fade-in-delay {
           animation: fade-in 1s ease-out 0.3s both;
         }
       `}</style>
     </div>
-  )
+  );
 }
